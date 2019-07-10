@@ -125,12 +125,12 @@ variable "elb_internal" {
 }
 
 variable "instance_type_vault" {
-    default = "m5a.2xlarge"
+    default = "t2.medium"
     description = "Instance type for Vault instances"
 }
 
 variable "instance_type_consul" {
-    default = "m5a.2xlarge"
+    default = "t2.medium"
     description = "Instance type for Consul instances"
 }
 
@@ -140,7 +140,7 @@ variable "key_name" {
 }
 
 variable "vault_nodes" {
-    default = "5"
+    default = "3"
     description = "number of Vault instances"
 }
 

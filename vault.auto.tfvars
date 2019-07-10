@@ -4,8 +4,8 @@ unzip_command = "sudo yum -y install unzip"
 
 # Ubuntu would be ami-759bc50a or ami-059eeca93cf09eebd
 ami = "ami-6871a115" # RHEL 7.5
-instance_type_vault  = "c5d.2xlarge"
-instance_type_consul = "c5d.2xlarge"
+instance_type_vault  = "t2.micro"
+instance_type_consul = "t2.micro"
 
 key_name = "mattpeters"
 vault_name_prefix = "mattspeters-benchmark-vault"
@@ -16,7 +16,7 @@ subnets = "subnet-004b0106fca7dea1c"
 elb_internal = false
 public_ip = true
 
-vault_nodes = "5"
+vault_nodes = "3"
 consul_nodes = "5"
 
 # This downloads Vault Enterprise by default
