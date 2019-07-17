@@ -133,8 +133,8 @@ You can also access your Consul UI through the Consul ELB: http://<Consul_ELB_ad
 
 This repo is designed to work with the following tools:
 
-https://github.com/wg/wrk
-https://github.com/giltene/wrk2
+* https://github.com/wg/wrk
+* https://github.com/giltene/wrk2
 
 More detailed test scripts can be found here: https://github.com/hashicorp/vault-guides/tree/master/operations/benchmarking/wrk-core-vault-operations
 
