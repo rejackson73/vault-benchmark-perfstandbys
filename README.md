@@ -142,8 +142,8 @@ Depending on the level of concurrency you use you may need to adjust the ulimit 
 
 Below are examples of a valid wrk/wrk2 tests that you could run from the benchmark server. This test is simple and would read a KV entry from Vault. We've given Envoy a static private IP but you could also resolve it with Consul DNS.
 
-10k concurrent connections for 5 minutes for max RPS & 10s timeout & latency stats.
-wrk -t4 -c10000 -d300s --latency --timeout 10s --header 'X-VAULT-TOKEN: <token>' 'https://10.0.1.20:8443/v1/secret/foo'
+```10k concurrent connections for 5 minutes for max RPS & 10s timeout & latency stats.
+wrk -t4 -c10000 -d300s --latency --timeout 10s --header 'X-VAULT-TOKEN: <token>' 'https://10.0.1.20:8443/v1/secret/foo'```
 
-10k concurrent connections for 5 minutes for 5k target RPS & 10s timeout & latency stats.
-wrk2 -t4 -R5000 -c10000 -d300s --latency --timeout 10s --header 'X-VAULT-TOKEN: <token>' 'https://10.0.1.20:8443/v1/secret/foo'
+```10k concurrent connections for 5 minutes for 5k target RPS & 10s timeout & latency stats.
+wrk2 -t4 -R5000 -c10000 -d300s --latency --timeout 10s --header 'X-VAULT-TOKEN: <token>' 'https://10.0.1.20:8443/v1/secret/foo'```
