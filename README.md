@@ -129,16 +129,16 @@ Now that you have initialized Vault, you can actually access the Vault UI using 
 
 You can also access your Consul UI through the Consul ELB: http://<Consul_ELB_address>:8500/ui.
 
-Running a Benchmark
+# Running a Benchmark
+
 This repo is designed to work with the following tools:
 
 https://github.com/wg/wrk
 https://github.com/giltene/wrk2
-More detailed test scripts can be found here.
+
+More detailed test scripts can be found here: https://github.com/hashicorp/vault-guides/tree/master/operations/benchmarking/wrk-core-vault-operations
 
 Depending on the level of concurrency you use you may need to adjust the ulimit when running wrk/wrk2 on either the benchmark server or your remote machine. Using both of these tools together can provide a holistic assessment of both stress and load capabilities of your cluster.
-
-These tools are downloaded and installed for you on the benchmark server. For best results you should test from within the LAN (the benchmark server) but there is an NLB in place if you so chose to run remotely and test over a WAN. You can get the NLB endpoint as a terraform output envoy_http or terraform output envoy_https.
 
 Below are examples of a valid wrk/wrk2 tests that you could run from the benchmark server. This test is simple and would read a KV entry from Vault. We've given Envoy a static private IP but you could also resolve it with Consul DNS.
 
