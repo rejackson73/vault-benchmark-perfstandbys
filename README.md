@@ -1,6 +1,6 @@
 # Deploy Vault to AWS with Consul Storage Backend
 
-This folder contains a Terraform module for deploying Vault to AWS (within a VPC) along with Consul as the storage backend. It can be used as-is or can be modified to work in your scenario, but should serve as a strong starting point for deploying Vault. It can be used with Ubuntu 16.04 or RHEL 7.5.
+This folder contains a Terraform module for deploying Vault to AWS (within a VPC) along with Consul as the storage backend. It can be used as-is or can be modified to work in your scenario, but should serve as a strong starting point for deploying Vault. It can be used with Ubuntu 16.04 or RHEL 7.5.  Terraform version must be <0.12.
 
 The Terraform code will create the following resources in a VPC and subnet that you specify in the AWS us-east-1 region:
 * IAM instance profile, IAM role, IAM policy, and associated IAM policy documents
